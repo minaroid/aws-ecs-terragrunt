@@ -18,5 +18,8 @@ inputs = {
   region              = "us-east-1"
   vpc_id              = "vpc-0cf57bbe2c3b5117d"
   subnets_ids         = ["subnet-0bf03fdbf00f02d76", "subnet-0302d46f3f1bae95b", "subnet-09716763cbb642adc"]
+  ecs_desired_count   = 3
+  ecs_max_count       = 10
+  ecs_min_count       = 2
 }
 
