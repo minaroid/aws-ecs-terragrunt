@@ -18,5 +18,4 @@ dependency "aws-ecr" {
 inputs = {
   log_group_name = dependency.aws-cloudwatch-log-group.outputs.log_group_name
   ecr_image_uri  = dependency.aws-ecr.outputs.ecr_image_uri
-
 }

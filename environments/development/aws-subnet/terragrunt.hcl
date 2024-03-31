@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../modules/aws-lb-target-group"
+  source = "../../../modules/aws-subnet"
 }
 
 include "root" {
@@ -12,9 +12,5 @@ dependency "aws-vpc" {
 }
 
 inputs = {
-    vpc_id  = dependency.aws-vpc.outputs.default_vpc_id
+  vpc_id  = dependency.aws-vpc.outputs.default_vpc_id
 }
-
-
-
-

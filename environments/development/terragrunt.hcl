@@ -12,14 +12,13 @@ generate "backend" {
   EOF
 }
 
-
 inputs = {
-  environment         = "development"
-  region              = "us-east-1"
-  vpc_id              = "vpc-0cf57bbe2c3b5117d"
-  subnets_ids         = ["subnet-0bf03fdbf00f02d76", "subnet-0302d46f3f1bae95b", "subnet-09716763cbb642adc"]
-  ecs_desired_count   = 3
-  ecs_max_count       = 10
-  ecs_min_count       = 2
+  environment          = "development"
+  region               = "us-east-1"
+  availability_zones   = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  public_cidr_blocks   = ["172.31.128.0/20", "172.31.144.0/20", "172.31.160.0/20"]
+  private_cidr_blocks  = ["172.31.112.0/20", "172.31.192.0/20", "172.31.208.0/20"]
+  ecs_desired_count    = 3
+  ecs_max_count        = 10
+  ecs_min_count        = 2
 }
-
