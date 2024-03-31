@@ -17,9 +17,9 @@ resource "aws_ecs_service" "ecs-service" {
     weight            = 1
   }
   network_configuration {
-    assign_public_ip = true
+    assign_public_ip = false
     security_groups  = var.ecs_task_security_groups
-    subnets          = var.subnets_ids
+    subnets          = var.private_subnets_ids
   }
   load_balancer {
     container_name   = "${var.environment}-nodejs-express"

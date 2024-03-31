@@ -6,8 +6,7 @@ variable "ecs_cluster_arn" {
   type = string
 }
 
-
-variable "subnets_ids" {
+variable "private_subnets_ids" {
   description = "subnets ids"
   type        = list(string)
 }

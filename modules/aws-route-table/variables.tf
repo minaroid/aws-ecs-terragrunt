@@ -1,12 +1,20 @@
+variable "vpc_id" {
+  description = "vpc id"
+}
 
-variable "alb_security_groups" {
+
+variable "nat_id" {
+  description = "nat id"
+}
+
+variable "private_subnets_ids" {
+  description = "private subnets ids"
   type        = list(string)
   default     = []
-  description = "ELB security groups"
 }
 
 variable "public_subnets_ids" {
-  description = "subnets ids"
+  description = "public subnets ids"
   type        = list(string)
   default     = []
 }

@@ -9,7 +9,7 @@ resource "aws_lb" "alb" {
   ip_address_type    = "ipv4"
 
   security_groups = var.alb_security_groups
-  subnets         = var.subnets_ids
+  subnets         = var.public_subnets_ids
 
   tags = {
     Name = "${var.environment}-alb"

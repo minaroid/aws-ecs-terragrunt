@@ -10,5 +10,4 @@ resource "aws_lb_listener" "alb-listener" {
     target_group_arn = var.target_group_arn
     type             = "forward"
   }
-
 }
