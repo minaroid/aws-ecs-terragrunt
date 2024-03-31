@@ -10,20 +10,20 @@ resource "aws_ecs_service" "ecs-service" {
   scheduling_strategy                = "REPLICA"
   deployment_maximum_percent         = 200
   deployment_minimum_healthy_percent = 100
-  desired_count                      = 3
+  desired_count                      = var.ecs_desired_count
   capacity_provider_strategy {
     base              = 0
     capacity_provider = "FARGATE"
     weight            = 1
   }
-  network_configuration { 
+  network_configuration {
     assign_public_ip = true
     security_groups  = var.ecs_task_security_groups
     subnets          = var.subnets_ids
   }
   load_balancer {
-    container_name   = "${var.environment}-nginx-container"
-    container_port   = 80
+    container_name   = "${var.environment}-nodejs-express"
+    container_port   = 3000
     target_group_arn = var.target_group_arn
   }
 

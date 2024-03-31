@@ -39,8 +39,8 @@ resource "aws_security_group" "ecs-task" {
 
 resource "aws_security_group_rule" "ecs-task-allow-http-ipv4" {
   type                     = "ingress"
-  from_port                = 80
-  to_port                  = 80
+  from_port                = 3000
+  to_port                  = 3000
   protocol                 = "tcp"
   security_group_id        = aws_security_group.ecs-task.id
   source_security_group_id = aws_security_group.alb.id

@@ -9,12 +9,12 @@ variable "region" {
   default = ""
 }
 
-variable "ecs_target_max_capacity" {
+variable "ecs_max_count" {
   type    = number
   default = 10
 }
 
-variable "ecs_target_min_capacity" {
+variable "ecs_min_count" {
   type    = number
   default = 1
 }
